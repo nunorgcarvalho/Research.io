@@ -2,7 +2,7 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-<title>Research.io: A Suite of Tools for Writing Papers</title>
+<title>Research.io</title>
 <link href="nc_assets/css/style.css" rel="stylesheet" type="text/css" />
 <link href="nc_assets/css/imported.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,8 +12,8 @@
 <img src="nc_assets/img/researchio.png" id="mainlogo">
 <div id="maintext">Research.io</div>
 <br>
-<p id="text" style="display:none;user-select: none;">The APA citation is used mainly in topics relating to science.</p>
-<p id="mla" style="display:block;user-select: none;"> The MLA citation is used mainly in topics relating to humanities.</p>
+<p id="apa" style="display:none;user-select: none;">The APA citation is used mainly in topics relating to science.</p><br>
+<p id="mla" style="display:block;user-select: none;"> The MLA citation is used mainly in topics relating to humanities.</p><br>
 
 <label class="switch" style="user-select: none;">
   <input type="checkbox" id="togBtn" onclick="myFunction()">
@@ -22,19 +22,47 @@
     <span class="off">MLA</span>
   </div>
 </label>
+<form id="apaForm" class="apaForm" style=" display:none">
+    <label for="name">First and Last Name: </label><br>
+    <input type="text" id="name" name="name" ><br>
+    <label for="title">Last name:</label><br>
+    <input type="text" id="title" name="title" value="mr./mrs."><br><br>
+    <input type="submit" value="Submit">
+</form>
+<form id="mlaForm" class="mlaForm" style=" display:block">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+</form>
 </div>
-
+<!--
+APA 
+Title
+Name(first then last)
+Institution
+------
+MLA
+Name
+Professor Name
+Course
+Date
+--> 
 
 <script>
 function myFunction() {
   var checkBox = document.getElementById("togBtn");
-  var text = document.getElementById("text");
   if (checkBox.checked == true){
-    text.style.display = "block";
+    apa.style.display = "block";
     mla.style.display = "none";
+    mlaForm.style.display = "none";
+    apaForm.style.display = "block";
   } else {
-     text.style.display = "none";
+     apa.style.display = "none";
      mla.style.display = "block";
+     mlaForm.style.display = "block";
+     apaForm.style.display = "none";
   }
 }
 </script>
