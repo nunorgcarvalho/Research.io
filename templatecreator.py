@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 # opens chrome/google doc
-driver = webdriver.Chrome(
-    '/Users/jason/OneDrive - University of North Georgia/CSCI 1301/chromedriver')
+driver = webdriver.Firefox(
+    'geckodriver path')
 driver.get('https://docs.google.com/document/u/0/')
 driver.implicitly_wait(10)
 # inputs email
