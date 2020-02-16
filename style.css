@@ -1,6 +1,6 @@
 body {
     background-color:  	#2c2f33;
-    }
+     }
     #centraldiv {
     position: absolute;
     top: 25%;
@@ -17,7 +17,7 @@ body {
     width: 17.5%;
     height: 15%;
     }
-    #maintext {
+    #maintext{
     position:absolute;
     top: 12.5%;
     right: 17%;
@@ -25,7 +25,17 @@ body {
     font-size: 2em;
     font-family: 'Nunito', sans-serif;
     }
-    
+    #mla, #apa{
+        position: absolute;
+        top: 40%;
+        display: inline-flex;
+        left: 10%;
+        right: 10%;
+        font-size: 15px;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+    }
     .switch {
       position: absolute;
       top: 30%;
