@@ -1,0 +1,39 @@
+.on {
+    display: none;
+  }
+  
+  .on,
+  .off {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 25%;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .on {
+    top: 52.5%;
+    user-select: none;
+  }
+  
+  .off {
+    left: auto;
+    right: 0px;
+    top: 52.5%;
+    user-select: none;
+  }
+  
+  input:checked+ .slider .on {
+    display: block;
+  }
+  
+  input:checked + .slider .off {
+    display: none;
+  }
+  
+  
+  /*--------- END --------*/
+  
+  
