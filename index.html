@@ -12,8 +12,9 @@
 <img src="nc_assets/img/researchio.png" id="mainlogo">
 <div id="maintext">Research.io</div>
 <br>
-<p id="apa" style="display:none;user-select: none;">The APA citation is used mainly in topics relating to science.</p><br>
-<p id="mla" style="display:block;user-select: none;"> The MLA citation is used mainly in topics relating to humanities.</p><br>
+<p id="apa" style="display:none;user-select: none;">The APA citation is used mainly in topics relating to science. APA is primarily used in research papers.
+</p><br>
+<p id="mla" style="display:block;user-select: none;"> MLA format is used for History, Literature, Language, Philosophy, Arts, Theatre, Religion, Anthropology, Law, and Politics.</p><br>
 
 <label class="switch" style="user-select: none;">
   <input type="checkbox" id="togBtn" onclick="myFunction()">
@@ -24,17 +25,23 @@
 </label>
 <form id="apaForm" class="apaForm" style=" display:none">
     <label for="name">First and Last Name: </label><br>
-    <input type="text" id="name" name="name" ><br>
-    <label for="title">Last name:</label><br>
-    <input type="text" id="title" name="title" value="mr./mrs."><br><br>
-    <input type="submit" value="Submit">
+    <input type="text" id="name" ><br>
+    <label for="title">Title of Paper:</label><br>
+    <input type="text" id="title"><br>
+    <label for="in">Institution:</label><br>
+    <input type="text" id="in"><br>
+    <br><input type="submit" value="Submit">
 </form>
 <form id="mlaForm" class="mlaForm" style=" display:block">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
+    <label for="name">First and Last Name:</label><br>
+    <input type="text" id="name" ><br>
+    <label for="prof">Professor's Name:</label><br>
+    <input type="text" id="prof" onfocus="this.value=''" value="mr./mrs."><br>
+    <label for="prof">Course:</label><br>
+    <input type="text" id="course" onfocus="this.value=''" value="include # at end"><br>
+    <label for="date">Due Date:</label><br>
+    <input type="date" id="date"><br>
+    <br><input type="submit" value="Submit">
 </form>
 </div>
 <!--
@@ -45,7 +52,7 @@ Institution
 ------
 MLA
 Name
-Professor Name
+prof Name
 Course
 Date
 --> 
