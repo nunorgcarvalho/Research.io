@@ -31,6 +31,107 @@ color: #FFFFFF;
 font-size: 2em;
 font-family: 'Nunito', sans-serif;
 }
+
+.switch {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  display: inline-block;
+  width: 50%;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ca2222;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 34px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color:  #0e00bd ;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(146px);
+  -ms-transform: translateX(146px);
+  transform: translateX(146px);
+}
+
+
+/*------ ADDED CSS ---------*/
+
+.on {
+  display: none;
+}
+
+.on,
+.off {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 25%;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.on {
+  top: 52.5%;
+}
+
+.off {
+  left: auto;
+  right: 0px;
+  top: 52.5%;
+}
+
+input:checked+ .slider .on {
+  display: block;
+}
+
+input:checked + .slider .off {
+  display: none;
+}
+
+
+/*--------- END --------*/
+
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 </style>
 </head>
 <body>
@@ -38,6 +139,15 @@ font-family: 'Nunito', sans-serif;
 <div id="centraldiv">
 <img src="researchio.png" id="mainlogo">
 <div id="maintext">Research.io</div>
+
+<label class="switch">
+  <input type="checkbox" id="togBtn">
+  <div class="slider round">
+    <span class="on">APA</span>
+    <span class="off">MLA</span>
+  </div>
+</label>
+
 </div>
 
 </body>
