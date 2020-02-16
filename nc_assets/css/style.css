@@ -3,22 +3,22 @@ body {
      }
     #centraldiv {
     position: absolute;
-    top: 20%;
+    top: 17.5%;
     left: 37.5%;
     width: 25%;
-    height: 75%;
+    height: 65%;
     border: 3px solid #FFFFFF;
     border-radius: 10px;
     }
     #mainlogo {
     position: absolute;
-    top: 11%;
+    top: 7%;
     left: 14%;
     width: 17.5%;
     }
     #maintext{
     position:absolute;
-    top: 12.5%;
+    top: 9.5%;
     right: 17%;
     color: #FFFFFF;
     font-size: 2em;
@@ -26,7 +26,7 @@ body {
     }
     #mla, #apa{
         position: absolute;
-        top: 34%;
+        top: 31%;
         display: inline-flex;
         left: 10%;
         right: 10%;
@@ -37,7 +37,7 @@ body {
     }
     #mlaForm, #apaForm{
         position: absolute;
-        top: 50%;
+        top: 47%;
         display: inline-flex;
         left: 10%;
         right: 10%;
@@ -49,17 +49,17 @@ body {
     }
     .switch {
       position: absolute;
-      top: 30%;
+      top: 24.5%;
       left: 25%;
       display: inline-block;
       width: 50%;
       height: 25px;
     }
-    
+
     .switch input {
       display: none;
     }
-    
+
     .slider {
       position: absolute;
       cursor: pointer;
@@ -67,11 +67,11 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: green;
+      background-color: #3d914e;
       -webkit-transition: .4s;
       transition: .4s;
     }
-    
+
     .slider:before {
       position: absolute;
       content: "";
@@ -83,28 +83,156 @@ body {
       -webkit-transition: .4s;
       transition: .4s;
     }
-    
+
     input:checked + .slider {
-      background-color:  purple ;
+      background-color:  #7971da ;
     }
-    
+
     input:focus + .slider {
       box-shadow: 0 0 1px #2196F3;
     }
-    
+
     input:checked + .slider:before {
-      -webkit-transform: translateX(146px);
-      -ms-transform: translateX(146px);
-      transform: translateX(146px);
+      -webkit-transform: translateX(155px);
+      -ms-transform: translateX(155px);
+      transform: translateX(155px);
     }
-    
-    
+
+
     /* Rounded sliders */
-    
+
     .slider.round {
       border-radius: 17px;
     }
-    
+
     .slider.round:before {
       border-radius: 50%;
+    }
+
+    #name {
+    position: absolute;
+    top: 0%;
+    left: 9%;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    padding: 5px;
+    width: 80%;
+    border: 0px;
+    border-radius: 5px;
+    }
+
+    #prof {
+      position: absolute;
+      top: 40%;
+      left: 9%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+    }
+
+    #course {
+      position: absolute;
+      top: 80%;
+      left: 9%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+    }
+
+    #date {
+      position: absolute;
+      top: 120%;
+      left: 9%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+    }
+    #submit {
+      position: absolute;
+      top: 175%;
+      left: 10.25%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    #submit:hover {
+      background-color: #3d914e;
+      color: #FFFFFF;
+    }
+
+    #name2 {
+    position: absolute;
+    top: 0%;
+    left: 9%;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    padding: 5px;
+    width: 80%;
+    border: 0px;
+    border-radius: 5px;
+    }
+
+    #title2 {
+      position: absolute;
+      top: 50%;
+      left: 9%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+    }
+
+    #in2 {
+      position: absolute;
+      top: 100%;
+      left: 9%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+    }
+
+    #submit2 {
+      position: absolute;
+      top: 220%;
+      left: 10.25%;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1em;
+      padding: 5px;
+      width: 80%;
+      border: 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    #submit2:hover {
+      background-color: #7971da;
+      color: #FFFFFF;
     }
