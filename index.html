@@ -24,28 +24,21 @@
   </div>
 </label>
 <form id="apaForm" class="apaForm" style=" display:none" action="testProgress.html">
-    <label for="name">First and Last Name: </label><br>
-    <input type="text" id="name" ><br>
-    <label for="title">Title of Paper:</label><br>
-    <input type="text" id="title"><br>
-    <label for="in">Institution:</label><br>
-    <input type="text" id="in"><br>
-    <br><input type="submit" value="Submit">
+    <input type="text" id="name2" placeholder="Full Name" required><br>
+    <input type="text" id="title2" placeholder="Title" required><br>
+    <input type="text" id="in2" placeholder="Institution" required><br>
+    <br><input type="submit" value="Submit" id="submit2">
 </form>
 <form id="mlaForm" class="mlaForm" style=" display:block" action="testProgress.html">
-    <label for="name">First and Last Name:</label><br>
-    <input type="text" id="name" ><br>
-    <label for="prof">Professor's Name:</label><br>
-    <input type="text" id="prof" onfocus="this.value=''" value="mr./mrs."><br>
-    <label for="prof">Course:</label><br>
-    <input type="text" id="course" onfocus="this.value=''" value="include # at end"><br>
-    <label for="date">Due Date:</label><br>
-    <input type="date" id="date"><br>
-    <br><input type="submit" value="Submit">
+    <input type="text" id="name" placeholder="Full Name" required><br>
+    <input type="text" id="prof" onfocus="this.value=''" placeholder="Professor" required><br>
+    <input type="text" id="course" onfocus="this.value=''" placeholder="Course" required><br>
+    <input type="date" id="date" placeholder="Due Date" required><br>
+    <br><input type="submit" value="Submit" id="submit">
 </form>
 </div>
 <!--
-APA 
+APA
 Title
 Name(first then last)
 Institution
@@ -55,7 +48,7 @@ Name
 prof Name
 Course
 Date
---> 
+-->
 
 <script>
 function myFunction() {
