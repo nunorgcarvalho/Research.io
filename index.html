@@ -3,152 +3,38 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 <title>Research.io: A Suite of Tools for Writing Papers</title>
-<style type="text/css">
-body {
-background-color: #5b29c7;
-}
-#centraldiv {
-position: absolute;
-top: 25%;
-left: 37.5%;
-width: 25%;
-height: 50%;
-border: 3px solid #FFFFFF;
-border-radius: 10px;
-}
-#mainlogo {
-position: absolute;
-top: 10%;
-left: 14%;
-width: 17.5%;
-height: 15%;
-}
-#maintext {
-position:absolute;
-top: 12.5%;
-right: 17%;
-color: #FFFFFF;
-font-size: 2em;
-font-family: 'Nunito', sans-serif;
-}
-
-.switch {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  display: inline-block;
-  width: 50%;
-  height: 34px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ca2222;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 34px;
-  width: 34px;
-  left: 0px;
-  bottom: 0px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color:  #0e00bd ;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(146px);
-  -ms-transform: translateX(146px);
-  transform: translateX(146px);
-}
-
-
-/*------ ADDED CSS ---------*/
-
-.on {
-  display: none;
-}
-
-.on,
-.off {
-  color: white;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 40%;
-  left: 25%;
-  font-size: 20px;
-  font-family: 'Nunito', sans-serif;
-}
-
-.on {
-  top: 52.5%;
-}
-
-.off {
-  left: auto;
-  right: 0px;
-  top: 52.5%;
-}
-
-input:checked+ .slider .on {
-  display: block;
-}
-
-input:checked + .slider .off {
-  display: none;
-}
-
-
-/*--------- END --------*/
-
-
-/* Rounded sliders */
-
-.slider.round {
-  border-radius: 17px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-</style>
+<link href="nc_assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="nc_assets/css/imported.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 <div id="centraldiv">
-<img src="researchio.png" id="mainlogo">
+<img src="nc_assets/img/researchio.png" id="mainlogo">
 <div id="maintext">Research.io</div>
 
-<label class="switch">
-  <input type="checkbox" id="togBtn">
+<label class="switch" style="user-select: none;">
+  <input type="checkbox" id="togBtn" onclick="myFunction()">
   <div class="slider round">
     <span class="on">APA</span>
     <span class="off">MLA</span>
   </div>
 </label>
-
 </div>
 
+<p id="text" style="display:none;user-select: none;">Checkbox is CHECKED!</p>
+<p id="mla" style="display:block;user-select: none;"> DA BRUH BRUh</p>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("togBtn");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+    mla.style.display = "none";
+  } else {
+     text.style.display = "none";
+     mla.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>
