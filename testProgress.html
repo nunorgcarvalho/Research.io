@@ -1,119 +1,129 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Research.io: </title>
-      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-<style type="text/css">
-body {
-    background-color:  	#2c2f33;
+
+<head>
+  <title>Research.io </title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-color: #2c2f33;
     }
-.demo-area {
-position: absolute;
-top: 17%;
-left: 25%;
-width: 50%;
-height: 80%;
-color: #000000;
-padding: 10px;
-border: 0px;
-font-family: 'Nunito', sans-serif;
-}
-.result {
-position: absolute;
-top: 20%;
-left: 13%;
-border-radius: 5px;
-border: 1px solid #FFFFFF;
-width: 10%;
-height: 20.5%;
-background-color: #FFFFFF;
-padding: 5px;
-font-family: 'Nunito', sans-serif;
-}
-.titleofstuff {
-font-size: 1.5em;
-color:  #7971da;
-}
-.greenstuff {
-color:   #3d914e ;
-}
-#previewbutton {
-position: absolute;
-top: 11.5%;
-right: 23.6%;
-height: 4%;
-width: 6%;
-background-color: #FFF;
-border-radius: 50px;
-background-color: #7971da;
-color: #FFF;
-font-family: 'Nunito', sans-serif;
-text-align: center;
-line-height: 32.5px;
-}
-#mainlogo {
-position: absolute;
-top:7.5%;
-left: 25%;
-width: 4.5%;
-height: 8%;
-}
-#maintext{
-position:absolute;
-top: 9%;
-left: 30.5%;
-color: #FFFFFF;
-font-size: 3em;
-font-family: 'Nunito', sans-serif;
-}
-</style>
-    </head>
-    <body>
 
-      <img src="nc_assets/img/researchio.png" id="mainlogo">
+    .demo-area {
+      position: absolute;
+      top: 17%;
+      left: 25%;
+      width: 50%;
+      height: 80%;
+      color: #000000;
+      padding: 10px;
+      border: 0px;
+      font-family: 'Nunito', sans-serif;
+    }
 
-      <div id="maintext">Research.io</div>
+    .result {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      border-radius: 5px;
+      border: 1px solid #FFFFFF;
+      width: 10%;
+      background-color: #FFFFFF;
+      padding: 5px;
+      font-family: 'Nunito', sans-serif;
+    }
 
-      <div id="previewbutton">
-          Preview
-      </div>
+    .titleofstuff {
+      font-size: 1.5em;
+      color: #7971da;
+    }
 
-        <section class="light-section" id="demo">
-            <div class="demo wrap">
-              <textarea placeholder="Start typing..." class="demo-area" id="countableArea"></textarea>
-              <div class="result">
-                <div class="grid">
-                  <div class="title">
-                    <div class="result-item">
-                      <strong class="titleofstuff">Statistics</strong>
-                    </div>
-                  </div>
-                  <p></p>
-                  <div class="col med-col-1-2">
-                    <div class="result-item">
-                      <strong class="greenstuff">Paragraphs: </strong><span class="result-count" id="result__paragraphs">0</span>
-                    </div>
-                  </div>
-                  <div class="col med-col-1-2">
-                    <div class="result-item">
-                      <strong class="greenstuff">Words: </strong><span class="result-count" id="result__words">0</span>
-                    </div>
-                  </div>
-                  <div class="col med-col-1-2">
-                    <div class="result-item">
-                      <strong class="greenstuff">Characters: </strong><span class="result-count" id="result__characters">0</span>
-                    </div>
-                  </div>
-                  <div class="col med-col-1-2">
-                    <div class="result-item">
-                      <strong class="greenstuff">Characters (with spaces): </strong><span class="result-count" id="result__all">0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    .greenstuff {
+      color: #3d914e;
+    }
+
+    #previewbutton {
+      position: absolute;
+      top: 11.5%;
+      right: 23.6%;
+      height: 4%;
+      width: 6%;
+      background-color: #FFF;
+      border-radius: 50px;
+      background-color: #7971da;
+      color: #FFF;
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+      line-height: 32.5px;
+    }
+
+    #mainlogo {
+      position: absolute;
+      top: 7.5%;
+      left: 25%;
+      width: 4.5%;
+      height: 8%;
+    }
+
+    #maintext {
+      position: absolute;
+      top: 9%;
+      left: 30.5%;
+      color: #FFFFFF;
+      font-size: 3em;
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <img src="nc_assets/img/researchio.png" id="mainlogo">
+
+  <div id="maintext">Research.io</div>
+
+  <div id="previewbutton">
+    Preview
+  </div>
+
+  <section class="light-section" id="demo">
+    <div class="demo wrap">
+      <textarea placeholder="Start typing..." class="demo-area" id="countableArea"></textarea>
+      <div class="result">
+        <div class="grid">
+          <div class="title">
+            <div class="result-item">
+              <strong class="titleofstuff">Statistics</strong>
             </div>
-          </section>
+          </div>
+          <p></p>
+          <div class="col med-col-1-2">
+            <div class="result-item">
+              <strong class="greenstuff">Paragraphs: </strong><span class="result-count"
+                id="result__paragraphs">0</span>
+            </div>
+          </div>
+          <div class="col med-col-1-2">
+            <div class="result-item">
+              <strong class="greenstuff">Words: </strong><span class="result-count" id="result__words">0</span>
+            </div>
+          </div>
+          <div class="col med-col-1-2">
+            <div class="result-item">
+              <strong class="greenstuff">Characters: </strong><span class="result-count"
+                id="result__characters">0</span>
+            </div>
+          </div>
+          <div class="col med-col-1-2">
+            <div class="result-item">
+              <strong class="greenstuff">Characters (with spaces): </strong><span class="result-count"
+                id="result__all">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <script src="wordCounter.js"></script>
-    </body>
+  <script src="wordCounter.js"></script>
+</body>
+
 </html>

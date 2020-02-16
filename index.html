@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-<title>Research.io</title>
-<link href="nc_assets/css/style.css" rel="stylesheet" type="text/css" />
-<link href="nc_assets/css/imported.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <title>Research.io</title>
+  <link href="nc_assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="nc_assets/css/imported.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 
-<div id="centraldiv">
-<img src="nc_assets/img/researchio.png" id="mainlogo">
-<div id="maintext">Research.io</div>
-<br>
-<p id="apa" style="display:none;user-select: none;">The APA citation is used mainly in topics relating to science. APA is primarily used in research papers.
-</p><br>
-<p id="mla" style="display:block;user-select: none;"> MLA format is used for History, Literature, Language, Philosophy, Arts, Theatre, Religion, Anthropology, Law, and Politics.</p><br>
+  <div id="centraldiv">
+    <img src="nc_assets/img/researchio.png" id="mainlogo">
+    <div id="maintext">Research.io</div>
+    <br>
+    <p id="apa" style="display:none;user-select: none;">The APA citation is used mainly in topics relating to science.
+      APA is primarily used in research papers.
+    </p><br>
+    <p id="mla" style="display:block;user-select: none;"> MLA format is used for History, Literature, Language,
+      Philosophy, Arts, Theatre, Religion, Anthropology, Law, and Politics.</p><br>
 
-<label class="switch" style="user-select: none;">
-  <input type="checkbox" id="togBtn" onclick="myFunction()">
-  <div class="slider round">
-    <span class="on">APA</span>
-    <span class="off">MLA</span>
+    <label class="switch" style="user-select: none;">
+      <input type="checkbox" id="togBtn" onclick="myFunction()">
+      <div class="slider round">
+        <span class="on">APA</span>
+        <span class="off">MLA</span>
+      </div>
+    </label>
+    <form id="mlaForm" class="mlaForm" style=" display:block" action="testProgress.html">
+      <input type="text" id="name" onfocus="this.value=''" placeholder="Full Name" name="name" required><br>
+      <input type="text" id="prof" onfocus="this.value=''" placeholder="Professor" name="prof" required><br>
+      <input type="text" id="course" onfocus="this.value=''" placeholder="Course" name="course" required><br>
+      <input type="date" id="date" placeholder="Due Date" name="date" required><br>
+      <br><input type="submit" value="Submit" id="submit">
+    </form>
+    <form id="apaForm" class="apaForm" style=" display:none" action="testProgress.html">
+      <input type="text" id="name2" onfocus="this.value=''" placeholder="Full Name" required><br>
+      <input type="text" id="title2" onfocus="this.value=''" placeholder="Title" required><br>
+      <input type="text" id="in2" onfocus="this.value=''" placeholder="Institution" required><br>
+      <br><input type="submit" value="Submit" id="submit2">
+    </form>
   </div>
-</label>
-<form id="apaForm" class="apaForm" style=" display:none" action="testProgress.html">
-    <input type="text" id="name2" placeholder="Full Name" required><br>
-    <input type="text" id="title2" placeholder="Title" required><br>
-    <input type="text" id="in2" placeholder="Institution" required><br>
-    <br><input type="submit" value="Submit" id="submit2">
-</form>
-<form id="mlaForm" class="mlaForm" style=" display:block" action="testProgress.html">
-    <input type="text" id="name" placeholder="Full Name" required><br>
-    <input type="text" id="prof" onfocus="this.value=''" placeholder="Professor" required><br>
-    <input type="text" id="course" onfocus="this.value=''" placeholder="Course" required><br>
-    <input type="date" id="date" placeholder="Due Date" required><br>
-    <br><input type="submit" value="Submit" id="submit">
-</form>
-</div>
-<!--
+  <!--
 APA
 Title
 Name(first then last)
@@ -50,21 +54,22 @@ Course
 Date
 -->
 
-<script>
-function myFunction() {
-  var checkBox = document.getElementById("togBtn");
-  if (checkBox.checked == true){
-    apa.style.display = "block";
-    mla.style.display = "none";
-    mlaForm.style.display = "none";
-    apaForm.style.display = "block";
-  } else {
-     apa.style.display = "none";
-     mla.style.display = "block";
-     mlaForm.style.display = "block";
-     apaForm.style.display = "none";
-  }
-}
-</script>
+  <script>
+    function myFunction() {
+      var checkBox = document.getElementById("togBtn");
+      if (checkBox.checked == true) {
+        apa.style.display = "block";
+        mla.style.display = "none";
+        mlaForm.style.display = "none";
+        apaForm.style.display = "block";
+      } else {
+        apa.style.display = "none";
+        mla.style.display = "block";
+        mlaForm.style.display = "block";
+        apaForm.style.display = "none";
+      }
+    }
+  </script>
 </body>
+
 </html>
