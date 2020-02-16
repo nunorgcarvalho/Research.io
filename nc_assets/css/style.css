@@ -12,10 +12,9 @@ body {
     }
     #mainlogo {
     position: absolute;
-    top: 10%;
+    top: 11%;
     left: 14%;
     width: 17.5%;
-    height: 15%;
     }
     #maintext{
     position:absolute;
@@ -27,7 +26,7 @@ body {
     }
     #mla, #apa{
         position: absolute;
-        top: 40%;
+        top: 34%;
         display: inline-flex;
         left: 10%;
         right: 10%;
@@ -68,7 +67,7 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #ca2222;
+      background-color: green;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -86,7 +85,7 @@ body {
     }
     
     input:checked + .slider {
-      background-color:  #0e00bd ;
+      background-color:  purple ;
     }
     
     input:focus + .slider {
