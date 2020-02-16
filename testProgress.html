@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
   <title>Research.io </title>
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
   <style type="text/css">
@@ -73,20 +74,78 @@
       font-size: 3em;
       font-family: 'Nunito', sans-serif;
     }
+    #gtfo{
+      position: absolute;
+      top: 50%;
+      background-color:#44c767;
+	    border-radius:28px;
+	    border:1px solid #18ab29;
+	    display:inline-block;
+	    cursor:pointer;
+	    color:#ffffff;
+	    font-family:Arial;
+	    font-size:17px;
+	    padding:16px 31px;
+	    text-decoration:none;
+	    text-shadow:0px 1px 0px #2f6627;
+    }
   </style>
 </head>
 <body>
+<div id="content">
+</div>
   <img src="nc_assets/img/researchio.png" id="mainlogo">
 
   <div id="maintext">Research.io</div>
 
-  <div id="previewbutton">
-    Preview
+  <div >
+    <a href="index.html" id="previewbutton">Go Back</a>
   </div>
-
+</div>
   <section class="light-section" id="demo">
     <div class="demo wrap">
-      <textarea placeholder="Start typing..." class="demo-area" id="countableArea"></textarea>
+    <table class="demo-area">
+      <tr>
+          <td colspan="3">
+            <textarea placeholder="Start typing..." class="demo-area" id="countableArea" style="width: 80%;height: 75%;left: 70.75px;top: 42.967px;"></textarea>
+          </td>
+      </tr>
+      <tr>
+          <td style="display: none;">Filename to Save As:</td>
+          <td><input id="inputFileNameToSaveAs" value="myText"style="display:none"></input></td>
+          <td><button id="gtfo" onclick="saveTextAsFile()" style="right: -200px;padding-top: 20px;padding-bottom: 20px;padding-right: 50px;padding-left: 50px;">Save</button></td>
+      </tr>
+
+  </table>
+   
+  <script type="text/javascript">
+   
+  function saveTextAsFile()
+  {
+      var textToSave = document.getElementById("countableArea").value;
+      var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+      var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+      var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+   
+      var downloadLink = document.createElement("a");
+      downloadLink.download = fileNameToSaveAs;
+      downloadLink.innerHTML = "Download File";
+      downloadLink.href = textToSaveAsURL;
+      downloadLink.onclick = destroyClickedElement;
+      downloadLink.style.display = "none";
+      document.body.appendChild(downloadLink);
+   
+      downloadLink.click();
+  }
+   
+  function destroyClickedElement(event)
+  {
+      document.body.removeChild(event.target);
+  }
+   
+   
+  </script>
+   
       <div class="result">
         <div class="grid">
           <div class="title">
